@@ -1,0 +1,6 @@
+{
+  "name": "ATELIER ÉTERNEL — Haute Couture & Avant-Garde Tailoring",
+  "description": "Ultra-aesthetic luxury fashion house website featuring seasonal editorial campaigns, artisanal lookbook, multi-view collections catalog, bespoke product showcases, and private styling concierge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concierge & Flagships — ATELIER ÉTERNEL</title>
+    <meta name="description" content="Connect with the Atelier Éternel concierge. Schedule bespoke private appointments across our flagship salons in Paris, Tokyo, New York, and Milan." />
+    <meta property="og:title" content="Concierge & Flagships — ATELIER ÉTERNEL" />
+    <meta property="og:description" content="Connect with the Atelier Éternel concierge. Schedule bespoke private appointments." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-[#0d0d0d] text-[#f3f3f3] selection:bg-[#c5a880] selection:text-[#0d0d0d]">
+    
+    <!-- TOP NAVIGATION BAR (Strict 3-zone contract) -->
+    <header class="site-header fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between border-b border-white/5 transition-all duration-300">
+      <a href="/index.html" class="font-display tracking-[0.22em] text-sm md:text-base font-semibold text-neutral-100 hover:text-amber-200 transition-colors uppercase">
+        Atelier Éternel
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs tracking-[0.14em] uppercase font-medium text-neutral-300">
+        <a href="/shop.html" class="editorial-link hover:text-neutral-100 transition-colors">Collections</a>
+        <a href="/lookbook.html" class="editorial-link hover:text-neutral-100 transition-colors">Lookbook</a>
+        <a href="/about.html" class="editorial-link hover:text-neutral-100 transition-colors">The Atelier</a>
+        <a href="/contact.html" class="editorial-link text-neutral-100 transition-colors">Concierge</a>
+      </nav>
+
+      <div class="flex items-center gap-6 text-xs tracking-[0.14em] uppercase font-medium">
+        <button data-open-cart class="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-1.5 focus:outline-none" aria-label="Open shopping bag">
+          <span>Bag</span>
+          <span class="cart-count-badge font-mono text-[11px] text-amber-300">(0)</span>
+        </button>
+        <button data-open-menu class="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-2 focus:outline-none" aria-label="Open menu overlay">
+          <span class="hidden sm:inline">Index</span>
+          <span class="text-base leading-none">☰</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN CONCIERGE & STORES CONTENT -->
+    <main class="pt-28 md:pt-36 pb-28 px-6 md:px-12 max-w-7xl mx-auto">
+      
+      <!-- Page Header -->
+      <section class="mb-16 border-b border-white/10 pb-12">
+        <div class="flex items-center gap-3 text-xs font-mono tracking-widest text-amber-300 uppercase mb-3">
+          <span>Private Client Services</span>
+          <span>/</span>
+          <span>Global Flagships</span>
+          <span>/</span>
+          <span>Paris · Tokyo · New York · Milan</span>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div class="lg:col-span-8">
+            <h1 class="font-serif-luxury text-4xl sm:text-6xl md:text-7xl text-neutral-100 tracking-tight leading-[0.98]">
+              Private Concierge & Salons
+            </h1>
+            <p class="text-neutral-300 text-sm md:text-base mt-4 max-w-2xl font-light leading-relaxed">
+              Our global ateliers offer intimate, private consultations for bespoke garment fittings, personal archiving, and made-to-measure commissions.
+            </p>
+          </div>
+          <div class="lg:col-span-4 font-mono text-xs text-neutral-400 space-y-2 border-l border-white/10 pl-6">
+            <div><span class="text-neutral-200">Direct Telephone:</span> +33 1 42 68 50 00</div>
+            <div><span class="text-neutral-200">Electronic Mail:</span> concierge@ateliereternel.com</div>
+            <div><span class="text-neutral-200">Salon Response:</span> Within 4 Business Hours</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLAGSHIP STORE DIRECTORY -->
+      <section class="mb-32">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-widest text-amber-300 block mb-1">Global Directory</span>
+            <h2 class="font-serif-luxury text-2xl sm:text-3xl text-neutral-100">Ateliers & Salons</h2>
+          </div>
+          <span class="font-mono text-xs text-neutral-400">4 Global Salons</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="flagship-stores-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- VIP STYLING CONSULTATION BOOKING FORM -->
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-32 border-t border-white/10 pt-16 reveal-init" id="vip">
+        
+        <div class="lg:col-span-5">
+          <span class="font-mono text-xs uppercase tracking-widest text-amber-300 mb-2 block">Bespoke Appointment</span>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl text-neutral-100 tracking-tight mb-4">
+            Reserve Your Private Salon Session
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed font-light mb-6">
+            Experience our archival garments in private comfort. A senior master tailor or atelier stylist will be reserved exclusively for you for 90 minutes.
+          </p>
+          
+          <div class="p-5 bg-[#121212] border border-white/10 font-mono text-xs space-y-3 mb-6">
+            <div class="flex items-start gap-2">
+              <span class="text-amber-300">✦</span>
+              <span class="text-neutral-300">Complimentary champagne, espresso, and mineral water.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-amber-300">✦</span>
+              <span class="text-neutral-300">Access to unreleased archive fabrics & custom horn buttons.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-amber-300">✦</span>
+              <span class="text-neutral-300">Precise 28-point physiological anatomical measurement archive.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-[#111111] border border-white/10 p-6 sm:p-10">
+          <form id="consultation-form" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="luxury-input-group">
+                <input type="text" id="consult-name" required placeholder=" " />
+                <label for="consult-name">Full Name</label>
+              </div>
+              <div class="luxury-input-group">
+                <input type="email" id="consult-email" required placeholder=" " />
+                <label for="consult-email">Email Address</label>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="luxury-input-group">
+                <input type="tel" id="consult-phone" required placeholder=" " />
+                <label for="consult-phone">Telephone (With Country Code)</label>
+              </div>
+              <div class="luxury-input-group">
+                <select id="consult-atelier" required class="bg-transparent text-neutral-200">
+                  <option value="" disabled selected class="bg-black text-neutral-400">Select Flagship Salon</option>
+                  <option value="paris" class="bg-black text-neutral-200">Paris (Rue du Faubourg Saint-Honoré)</option>
+                  <option value="tokyo" class="bg-black text-neutral-200">Tokyo (Minami-Aoyama)</option>
+                  <option value="newyork" class="bg-black text-neutral-200">New York (Mercer Street, SoHo)</option>
+                  <option value="milan" class="bg-black text-neutral-200">Milano (Via Montenapoleone)</option>
+                </select>
+                <label for="consult-atelier">Flagship Atelier</label>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="luxury-input-group">
+                <input type="date" id="consult-date" required class="text-neutral-200" />
+                <label for="consult-date">Preferred Date</label>
+              </div>
+              <div class="luxury-input-group">
+                <select id="consult-focus" required class="bg-transparent text-neutral-200">
+                  <option value="" disabled selected class="bg-black text-neutral-400">Select Styling Focus</option>
+                  <option value="outerwear" class="bg-black text-neutral-200">Cashmere Outerwear & Coat Fitting</option>
+                  <option value="bespoke" class="bg-black text-neutral-200">Made-to-Measure Suiting & Tailoring</option>
+                  <option value="capsule" class="bg-black text-neutral-200">Full Seasonal Wardrobe Archiving</option>
+                  <option value="hemming" class="bg-black text-neutral-200">Archival Garment Restoration & Hemming</option>
+                </select>
+                <label for="consult-focus">Styling Focus</label>
+              </div>
+            </div>
+
+            <div class="luxury-input-group">
+              <textarea id="consult-notes" rows="3" placeholder=" "></textarea>
+              <label for="consult-notes">Special Requests, Sizing Notes, or Champagne Preferences (Optional)</label>
+            </div>
+
+            <button type="submit" class="btn-luxury w-full text-xs py-3.5 tracking-[0.2em]">
+              Request VIP Appointment
+            </button>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- FREQUENTLY ASKED QUESTIONS ACCORDION -->
+      <section class="max-w-4xl mx-auto border-t border-white/10 pt-16 reveal-init">
+        <div class="text-center mb-12">
+          <span class="font-mono text-xs uppercase tracking-widest text-amber-300 block mb-2">Knowledge Base</span>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl text-neutral-100">House Protocols & Inquiries</h2>
+        </div>
+
+        <div class="border-t border-white/10 divide-y divide-white/10">
+          
+          <div class="accordion-item open py-5">
+            <button class="accordion-header flex items-center justify-between w-full text-left font-serif text-lg sm:text-xl text-neutral-100 focus:outline-none">
+              <span>What are the lead times for Made-to-Measure commissions?</span>
+              <span class="accordion-icon text-amber-300 text-2xl font-light leading-none">+</span>
+            </button>
+            <div class="accordion-content text-xs sm:text-sm text-neutral-300 font-light leading-relaxed pt-3">
+              <p>Made-to-measure tailoring and bespoke overcoats require approximately 4 to 6 weeks from anatomical measurement to final fitting. This allows for intermediate basted fitting sessions and thorough hand-steaming on shaped wooden forms.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item py-5">
+            <button class="accordion-header flex items-center justify-between w-full text-left font-serif text-lg sm:text-xl text-neutral-100 focus:outline-none">
+              <span>Are alterations complimentary for online acquisitions?</span>
+              <span class="accordion-icon text-amber-300 text-2xl font-light leading-none">+</span>
+            </button>
+            <div class="accordion-content text-xs sm:text-sm text-neutral-300 font-light leading-relaxed pt-3">
+              <p>Yes. Any garment acquired through our official site may be brought to our flagship ateliers in Paris, Tokyo, New York, or Milan for complimentary trouser cuff hemming, sleeve vent adjustments, and button repositioning.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item py-5">
+            <button class="accordion-header flex items-center justify-between w-full text-left font-serif text-lg sm:text-xl text-neutral-100 focus:outline-none">
+              <span>How does Atelier Éternel handle archival restocks?</span>
+              <span class="accordion-icon text-amber-300 text-2xl font-light leading-none">+</span>
+            </button>
+            <div class="accordion-content text-xs sm:text-sm text-neutral-300 font-light leading-relaxed pt-3">
+              <p>Because we only weave our virgin wools and cashmere in batches matching limited pastoral wool yields, our collections are capped at 45 pieces. Once an archival edition is spoken for, it is not re-manufactured until the subsequent calendar year’s spring molt.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item py-5">
+            <button class="accordion-header flex items-center justify-between w-full text-left font-serif text-lg sm:text-xl text-neutral-100 focus:outline-none">
+              <span>What is the private returns policy?</span>
+              <span class="accordion-icon text-amber-300 text-2xl font-light leading-none">+</span>
+            </button>
+            <div class="accordion-content text-xs sm:text-sm text-neutral-300 font-light leading-relaxed pt-3">
+              <p>We provide a 30-day white-glove return window for all standard pieces in unworn condition with archival security seals intact. Our courier will collect the package directly from your residence or office at zero charge.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- VIP CONSULTATION CONFIRMATION MODAL -->
+    <div id="booking-confirmed-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-[9996] opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+      <div class="bg-[#121212] border border-amber-300/40 max-w-md w-full p-8 text-center relative">
+        <div class="w-14 h-14 rounded-full border border-amber-300 text-amber-300 flex items-center justify-center mx-auto mb-5 text-xl font-serif">
+          ✓
+        </div>
+        <p class="font-mono text-xs uppercase tracking-widest text-amber-300 mb-2">Salon Confirmed</p>
+        <h3 class="font-serif text-2xl text-neutral-100 mb-3">Appointment Requested</h3>
+        <p id="booking-confirmed-text" class="text-xs text-neutral-300 leading-relaxed font-light mb-6">
+          Your appointment request has been submitted. Our salon director will reach out via telephone to confirm your preferred fitting window.
+        </p>
+        <button id="close-booking-modal-btn" class="btn-luxury text-xs">
+          Return To Concierge
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-[#0a0a0a] pt-16 pb-12 px-6 md:px-16 text-xs text-neutral-400 font-light">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="md:col-span-1">
+          <span class="font-display tracking-[0.22em] text-sm font-semibold text-neutral-100 uppercase block mb-4">
+            Atelier Éternel
+          </span>
+          <p class="leading-relaxed text-neutral-400 mb-4">
+            Haute couture and avant-garde tailoring sculpted in our Paris atelier. Uncompromising tactile purity.
+          </p>
+          <span class="font-mono text-[11px] text-amber-300">24 Rue du Faubourg Saint-Honoré, Paris</span>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">Collections</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/shop.html" class="hover:text-amber-200 transition-colors">Autumn/Winter 2026</a></li>
+            <li><a href="/shop.html?category=Outerwear" class="hover:text-amber-200 transition-colors">Outerwear & Coats</a></li>
+            <li><a href="/shop.html?category=Tailoring" class="hover:text-amber-200 transition-colors">Bespoke Tailoring</a></li>
+            <li><a href="/shop.html?category=Knitwear" class="hover:text-amber-200 transition-colors">Geelong Knitwear</a></li>
+            <li><a href="/shop.html?category=Accessories" class="hover:text-amber-200 transition-colors">Leather & Silk Objects</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">House & Atelier</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/about.html" class="hover:text-amber-200 transition-colors">The Philosophy</a></li>
+            <li><a href="/about.html#craft" class="hover:text-amber-200 transition-colors">Artisanal Savoir-Faire</a></li>
+            <li><a href="/lookbook.html" class="hover:text-amber-200 transition-colors">Campaign Lookbook</a></li>
+            <li><a href="/contact.html" class="hover:text-amber-200 transition-colors">Flagship Ateliers</a></li>
+            <li><a href="/contact.html#vip" class="hover:text-amber-200 transition-colors">Private VIP Styling</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">Concierge & Care</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/contact.html" class="hover:text-amber-200 transition-colors">Client Services</a></li>
+            <li><span class="text-neutral-500">concierge@ateliereternel.com</span></li>
+            <li><span class="text-neutral-500">+33 1 42 68 50 00</span></li>
+            <li><span class="text-neutral-500">Complimentary Global Returns</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-neutral-500">
+        <div>© 2026 ATELIER ÉTERNEL PARIS. All rights reserved.</div>
+        <div class="flex gap-6">
+          <span>Terms of Maison</span>
+          <span>Traceability Codex</span>
+          <span>Privacy Protocol</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div class="cart-drawer-overlay"></div>
+    <aside class="cart-drawer-panel" aria-label="Shopping Bag">
+      <div class="p-6 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="font-serif text-lg tracking-wide text-neutral-100">Shopping Bag</span>
+          <span class="cart-count-badge font-mono text-xs text-amber-300">(0)</span>
+        </div>
+        <button data-close-cart class="text-neutral-400 hover:text-white p-2 text-sm focus:outline-none" aria-label="Close cart drawer">
+          ✕
+        </button>
+      </div>
+
+      <div class="px-6 py-3 bg-white/5 border-b border-white/10">
+        <div class="text-[11px] font-mono text-neutral-300 cart-shipping-text mb-1.5">
+          Complimentary courier delivery on all orders over €500
+        </div>
+        <div class="w-full bg-white/10 h-1 overflow-hidden">
+          <div class="cart-shipping-bar bg-amber-300 h-full transition-all duration-500 w-0"></div>
+        </div>
+      </div>
+
+      <div class="cart-items-container flex-1 overflow-y-auto px-6 divide-y divide-white/5"></div>
+
+      <div class="p-6 border-t border-white/10 bg-[#0f0f0f] space-y-4">
+        <div class="flex gap-2">
+          <input type="text" placeholder="Privilege Code (e.g. ETERNEL10)" class="cart-promo-input bg-black border border-white/15 px-3 py-2 text-xs font-mono text-neutral-200 placeholder:text-neutral-600 focus:outline-none focus:border-amber-300 flex-1 uppercase" />
+          <button class="cart-promo-apply-btn btn-luxury-outline text-xs px-3 py-2">Apply</button>
+        </div>
+        <span class="cart-promo-msg hidden"></span>
+
+        <div class="space-y-1.5 text-xs text-neutral-400 font-mono">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span class="cart-subtotal-price text-neutral-200">€0</span>
+          </div>
+          <div class="cart-discount-row flex justify-between text-amber-300" style="display: none;">
+            <span>VIP Privilege (10%)</span>
+            <span class="cart-discount-amount">-€0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Courier Dispatch</span>
+            <span class="text-neutral-200">Complimentary</span>
+          </div>
+          <div class="flex justify-between text-sm text-neutral-100 pt-2 border-t border-white/10 font-serif">
+            <span>Total</span>
+            <span class="cart-final-total font-mono text-amber-300">€0</span>
+          </div>
+        </div>
+
+        <button class="cart-checkout-btn btn-luxury w-full text-xs">
+          Proceed To Checkout
+        </button>
+      </div>
+    </aside>
+
+    <!-- FULLSCREEN ANIMATED OVERLAY MENU -->
+    <div class="menu-overlay" aria-label="Main Site Navigation">
+      <div class="flex justify-between items-center w-full">
+        <span class="font-display text-sm tracking-[0.22em] text-neutral-300 uppercase">
+          Index · Maison
+        </span>
+        <button data-close-menu class="text-neutral-400 hover:text-white text-xl p-2 focus:outline-none" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-6 sm:gap-8 my-auto">
+        <a href="/index.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          01. Editorial Home
+        </a>
+        <a href="/shop.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          02. All Collections
+        </a>
+        <a href="/lookbook.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          03. Campaign Lookbook
+        </a>
+        <a href="/about.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          04. Philosophy & Atelier
+        </a>
+        <a href="/contact.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          05. Concierge & Flagships
+        </a>
+      </nav>
+
+      <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 text-xs font-mono text-neutral-400 border-t border-white/10 pt-6">
+        <div>
+          <div>Paris Marais · Tokyo Aoyama · New York SoHo · Milano Montenapoleone</div>
+          <div class="text-neutral-500 mt-1">Concierge Line: +33 1 42 68 50 00</div>
+        </div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-amber-300">Instagram</a>
+          <a href="#" class="hover:text-amber-300">Artsy</a>
+          <a href="#" class="hover:text-amber-300">Vogue Runway</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Scripts -->
+    <script type="module" src="/src/js/main.js"></script>
+
+    <!-- Contact & Directory Controller -->
+    <script type="module">
+      import { FLAGSHIP_STORES } from '/src/js/products.js';
+      import { showToast } from '/src/js/main.js';
+
+      const storesContainer = document.getElementById('flagship-stores-grid');
+      storesContainer.innerHTML = FLAGSHIP_STORES.map(store => `
+        <article class="border border-white/10 bg-[#121212] overflow-hidden flex flex-col justify-between">
+          <div class="aspect-[4/3] bg-neutral-900 overflow-hidden relative">
+            <img src="${store.image}" alt="${store.city} Atelier" class="w-full h-full object-cover" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-sm px-2.5 py-1 text-[10px] font-mono text-amber-300 uppercase tracking-widest border border-white/10">
+              ${store.district}
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl text-neutral-100 mb-1">${store.city}</h3>
+              <p class="text-xs text-neutral-400 font-light mb-4">${store.address}</p>
+              
+              <div class="space-y-1.5 font-mono text-[11px] text-neutral-400 border-t border-white/10 pt-4 mb-6">
+                <div><span class="text-neutral-200">Hours:</span> ${store.hours}</div>
+                <div><span class="text-neutral-200">Telephone:</span> ${store.phone}</div>
+                <div><span class="text-neutral-200">Coordinates:</span> ${store.coordinates}</div>
+                <div><span class="text-neutral-200">Consultant:</span> ${store.consultant}</div>
+              </div>
+            </div>
+
+            <button class="btn-luxury-outline w-full text-xs py-2 book-store-btn" data-city="${store.id}">
+              Book Salon Session
+            </button>
+          </div>
+        </article>
+      `).join('');
+
+      // Auto-populate atelier dropdown when clicking book on store card
+      storesContainer.querySelectorAll('.book-store-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const city = btn.getAttribute('data-city');
+          const select = document.getElementById('consult-atelier');
+          if (select) select.value = city;
+          document.getElementById('vip').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Handle Consultation Form Submission
+      const consultForm = document.getElementById('consult-form');
+      const bookingModal = document.getElementById('booking-confirmed-modal');
+      const closeBookingModalBtn = document.getElementById('close-booking-modal-btn');
+      const bookingText = document.getElementById('booking-confirmed-text');
+
+      consultForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('consult-name').value;
+        const atelierSelect = document.getElementById('consult-atelier');
+        const atelierName = atelierSelect.options[atelierSelect.selectedIndex].text;
+        const date = document.getElementById('consult-date').value;
+
+        bookingText.innerHTML = `
+          Dear <strong>${name}</strong>, your private styling appointment at <strong>${atelierName}</strong> has been registered for <strong>${date}</strong>. Our salon director will contact you via phone within 4 business hours with your private access code.
+        `;
+
+        bookingModal.classList.remove('opacity-0', 'pointer-events-none');
+        showToast("Private styling appointment requested");
+        consultForm.reset();
+      });
+
+      if (closeBookingModalBtn) {
+        closeBookingModalBtn.addEventListener('click', () => {
+          bookingModal.classList.add('opacity-0', 'pointer-events-none');
+        });
+      }
+    </script>
+  </body>
+</html>

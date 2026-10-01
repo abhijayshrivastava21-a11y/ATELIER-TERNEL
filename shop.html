@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collections — ATELIER ÉTERNEL</title>
+    <meta name="description" content="Discover the Autumn/Winter 2026 collections by Atelier Éternel. Masterfully tailored outerwear, cashmere overcoats, deconstructed wool blazers, and artisanal leather objects." />
+    <meta property="og:title" content="Collections — ATELIER ÉTERNEL" />
+    <meta property="og:description" content="Masterfully tailored outerwear, cashmere overcoats, deconstructed wool blazers, and artisanal leather objects." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-[#0d0d0d] text-[#f3f3f3] selection:bg-[#c5a880] selection:text-[#0d0d0d]">
+    
+    <!-- TOP NAVIGATION BAR (Strict 3-zone contract) -->
+    <header class="site-header fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between border-b border-white/5 transition-all duration-300">
+      <a href="/index.html" class="font-display tracking-[0.22em] text-sm md:text-base font-semibold text-neutral-100 hover:text-amber-200 transition-colors uppercase">
+        Atelier Éternel
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs tracking-[0.14em] uppercase font-medium text-neutral-300">
+        <a href="/shop.html" class="editorial-link text-neutral-100 transition-colors">Collections</a>
+        <a href="/lookbook.html" class="editorial-link hover:text-neutral-100 transition-colors">Lookbook</a>
+        <a href="/about.html" class="editorial-link hover:text-neutral-100 transition-colors">The Atelier</a>
+        <a href="/contact.html" class="editorial-link hover:text-neutral-100 transition-colors">Concierge</a>
+      </nav>
+
+      <div class="flex items-center gap-6 text-xs tracking-[0.14em] uppercase font-medium">
+        <button data-open-cart class="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-1.5 focus:outline-none" aria-label="Open shopping bag">
+          <span>Bag</span>
+          <span class="cart-count-badge font-mono text-[11px] text-amber-300">(0)</span>
+        </button>
+        <button data-open-menu class="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-2 focus:outline-none" aria-label="Open menu overlay">
+          <span class="hidden sm:inline">Index</span>
+          <span class="text-base leading-none">☰</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN SHOP CONTENT -->
+    <main class="pt-28 md:pt-36 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+      
+      <!-- Catalog Header -->
+      <div class="mb-12 border-b border-white/10 pb-8">
+        <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-amber-300 uppercase mb-2">
+          <span>Autumn / Winter 2026</span>
+          <span>·</span>
+          <span>Prêt-à-Porter & Sur-Mesure</span>
+        </div>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <h1 class="font-serif-luxury text-4xl sm:text-5xl md:text-6xl text-neutral-100 tracking-tight">
+              Permanent Catalog
+            </h1>
+            <p class="text-xs sm:text-sm text-neutral-400 mt-2 max-w-xl font-light">
+              Architectural garments engineered with single-origin natural fibers. Each silhouette is produced in numbered micro-batches at our Paris and Florence workshops.
+            </p>
+          </div>
+          <div class="font-mono text-xs text-neutral-400">
+            <span id="catalog-count-label">Showing 8 Creations</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STICKY FILTER & CONTROLS TOOLBAR -->
+      <section class="sticky top-16 md:top-20 z-40 bg-[#0d0d0d]/90 backdrop-blur-md py-4 border-b border-white/10 mb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0" id="category-tabs">
+          <button class="filter-tab-btn active px-3.5 py-1.5 text-xs font-mono uppercase tracking-wider bg-white text-black transition-colors" data-category="All">
+            All
+          </button>
+          <button class="filter-tab-btn px-3.5 py-1.5 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors" data-category="Outerwear">
+            Outerwear
+          </button>
+          <button class="filter-tab-btn px-3.5 py-1.5 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors" data-category="Tailoring">
+            Tailoring
+          </button>
+          <button class="filter-tab-btn px-3.5 py-1.5 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors" data-category="Knitwear">
+            Knitwear
+          </button>
+          <button class="filter-tab-btn px-3.5 py-1.5 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors" data-category="Accessories">
+            Accessories
+          </button>
+        </div>
+
+        <!-- Right Controls: Sort & Grid Toggler -->
+        <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+          
+          <!-- Live Sort Dropdown -->
+          <div class="flex items-center gap-2 text-xs font-mono text-neutral-400">
+            <label for="catalog-sort" class="hidden sm:inline">Sort:</label>
+            <select id="catalog-sort" class="bg-[#141414] border border-white/15 px-3 py-1.5 text-xs font-mono text-neutral-200 focus:outline-none focus:border-amber-300">
+              <option value="featured">Featured Curations</option>
+              <option value="price-asc">Price: Ascending</option>
+              <option value="price-desc">Price: Descending</option>
+              <option value="newest">Newest Editions</option>
+            </select>
+          </div>
+
+          <!-- Grid Toggler (2-col editorial vs 4-col compact) -->
+          <div class="flex items-center border border-white/15 p-0.5">
+            <button id="grid-toggle-2" class="px-2.5 py-1 text-xs font-mono text-neutral-400 hover:text-white transition-colors" title="2-Column Editorial View" aria-label="2-column grid">
+              2 Col
+            </button>
+            <button id="grid-toggle-4" class="px-2.5 py-1 text-xs font-mono bg-white/20 text-white transition-colors active" title="4-Column Grid View" aria-label="4-column grid">
+              4 Col
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PRODUCT CARDS GRID CONTAINER -->
+      <section id="shop-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 transition-all duration-300">
+        <!-- Rendered dynamically via JavaScript -->
+      </section>
+
+      <!-- Empty State Container -->
+      <div id="shop-empty-state" class="hidden text-center py-20">
+        <p class="font-serif text-2xl text-neutral-300 mb-2">No garments found in this category.</p>
+        <p class="text-xs font-mono text-neutral-500 mb-6">Reset filters to explore all archival pieces.</p>
+        <button id="reset-filters-btn" class="btn-luxury text-xs">Reset All Filters</button>
+      </div>
+
+      <!-- Craft & Care Assurance Banner -->
+      <section class="mt-24 pt-16 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-8 text-xs font-light text-neutral-400">
+        <div>
+          <span class="block font-mono text-amber-300 mb-2 uppercase tracking-widest text-[11px]">Bespoke White-Glove Dispatch</span>
+          <p class="leading-relaxed">Every purchase is encased in acid-free archival tissue, cedar garment bags, and dispatched with fully insured carbon-neutral courier.</p>
+        </div>
+        <div>
+          <span class="block font-mono text-amber-300 mb-2 uppercase tracking-widest text-[11px]">Private Ateliers Hemming</span>
+          <p class="leading-relaxed">Complimentary custom trousers cuff hemming and sleeve adjustment at any of our flagship salons in Paris, Tokyo, New York, or Milan.</p>
+        </div>
+        <div>
+          <span class="block font-mono text-amber-300 mb-2 uppercase tracking-widest text-[11px]">Lifetime Restoration Guarantee</span>
+          <p class="leading-relaxed">We provide seasonal revitalization, cashmere brushing, and leather reconditioning services for all archival garments.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-[#0a0a0a] pt-16 pb-12 px-6 md:px-16 text-xs text-neutral-400 font-light">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="md:col-span-1">
+          <span class="font-display tracking-[0.22em] text-sm font-semibold text-neutral-100 uppercase block mb-4">
+            Atelier Éternel
+          </span>
+          <p class="leading-relaxed text-neutral-400 mb-4">
+            Haute couture and avant-garde tailoring sculpted in our Paris atelier. Uncompromising tactile purity.
+          </p>
+          <span class="font-mono text-[11px] text-amber-300">24 Rue du Faubourg Saint-Honoré, Paris</span>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">Collections</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/shop.html" class="hover:text-amber-200 transition-colors">Autumn/Winter 2026</a></li>
+            <li><a href="/shop.html?category=Outerwear" class="hover:text-amber-200 transition-colors">Outerwear & Coats</a></li>
+            <li><a href="/shop.html?category=Tailoring" class="hover:text-amber-200 transition-colors">Bespoke Tailoring</a></li>
+            <li><a href="/shop.html?category=Knitwear" class="hover:text-amber-200 transition-colors">Geelong Knitwear</a></li>
+            <li><a href="/shop.html?category=Accessories" class="hover:text-amber-200 transition-colors">Leather & Silk Objects</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">House & Atelier</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/about.html" class="hover:text-amber-200 transition-colors">The Philosophy</a></li>
+            <li><a href="/about.html#craft" class="hover:text-amber-200 transition-colors">Artisanal Savoir-Faire</a></li>
+            <li><a href="/lookbook.html" class="hover:text-amber-200 transition-colors">Campaign Lookbook</a></li>
+            <li><a href="/contact.html" class="hover:text-amber-200 transition-colors">Flagship Ateliers</a></li>
+            <li><a href="/contact.html#vip" class="hover:text-amber-200 transition-colors">Private VIP Styling</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">Concierge & Care</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/contact.html" class="hover:text-amber-200 transition-colors">Client Services</a></li>
+            <li><span class="text-neutral-500">concierge@ateliereternel.com</span></li>
+            <li><span class="text-neutral-500">+33 1 42 68 50 00</span></li>
+            <li><span class="text-neutral-500">Complimentary Global Returns</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-neutral-500">
+        <div>© 2026 ATELIER ÉTERNEL PARIS. All rights reserved.</div>
+        <div class="flex gap-6">
+          <span>Terms of Maison</span>
+          <span>Traceability Codex</span>
+          <span>Privacy Protocol</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div class="cart-drawer-overlay"></div>
+    <aside class="cart-drawer-panel" aria-label="Shopping Bag">
+      <div class="p-6 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="font-serif text-lg tracking-wide text-neutral-100">Shopping Bag</span>
+          <span class="cart-count-badge font-mono text-xs text-amber-300">(0)</span>
+        </div>
+        <button data-close-cart class="text-neutral-400 hover:text-white p-2 text-sm focus:outline-none" aria-label="Close cart drawer">
+          ✕
+        </button>
+      </div>
+
+      <div class="px-6 py-3 bg-white/5 border-b border-white/10">
+        <div class="text-[11px] font-mono text-neutral-300 cart-shipping-text mb-1.5">
+          Complimentary courier delivery on all orders over €500
+        </div>
+        <div class="w-full bg-white/10 h-1 overflow-hidden">
+          <div class="cart-shipping-bar bg-amber-300 h-full transition-all duration-500 w-0"></div>
+        </div>
+      </div>
+
+      <div class="cart-items-container flex-1 overflow-y-auto px-6 divide-y divide-white/5"></div>
+
+      <div class="p-6 border-t border-white/10 bg-[#0f0f0f] space-y-4">
+        <div class="flex gap-2">
+          <input type="text" placeholder="Privilege Code (e.g. ETERNEL10)" class="cart-promo-input bg-black border border-white/15 px-3 py-2 text-xs font-mono text-neutral-200 placeholder:text-neutral-600 focus:outline-none focus:border-amber-300 flex-1 uppercase" />
+          <button class="cart-promo-apply-btn btn-luxury-outline text-xs px-3 py-2">Apply</button>
+        </div>
+        <span class="cart-promo-msg hidden"></span>
+
+        <div class="space-y-1.5 text-xs text-neutral-400 font-mono">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span class="cart-subtotal-price text-neutral-200">€0</span>
+          </div>
+          <div class="cart-discount-row flex justify-between text-amber-300" style="display: none;">
+            <span>VIP Privilege (10%)</span>
+            <span class="cart-discount-amount">-€0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Courier Dispatch</span>
+            <span class="text-neutral-200">Complimentary</span>
+          </div>
+          <div class="flex justify-between text-sm text-neutral-100 pt-2 border-t border-white/10 font-serif">
+            <span>Total</span>
+            <span class="cart-final-total font-mono text-amber-300">€0</span>
+          </div>
+        </div>
+
+        <button class="cart-checkout-btn btn-luxury w-full text-xs">
+          Proceed To Checkout
+        </button>
+      </div>
+    </aside>
+
+    <!-- FULLSCREEN ANIMATED OVERLAY MENU -->
+    <div class="menu-overlay" aria-label="Main Site Navigation">
+      <div class="flex justify-between items-center w-full">
+        <span class="font-display text-sm tracking-[0.22em] text-neutral-300 uppercase">
+          Index · Maison
+        </span>
+        <button data-close-menu class="text-neutral-400 hover:text-white text-xl p-2 focus:outline-none" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-6 sm:gap-8 my-auto">
+        <a href="/index.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          01. Editorial Home
+        </a>
+        <a href="/shop.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          02. All Collections
+        </a>
+        <a href="/lookbook.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          03. Campaign Lookbook
+        </a>
+        <a href="/about.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          04. Philosophy & Atelier
+        </a>
+        <a href="/contact.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          05. Concierge & Flagships
+        </a>
+      </nav>
+
+      <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 text-xs font-mono text-neutral-400 border-t border-white/10 pt-6">
+        <div>
+          <div>Paris Marais · Tokyo Aoyama · New York SoHo · Milano Montenapoleone</div>
+          <div class="text-neutral-500 mt-1">Concierge Line: +33 1 42 68 50 00</div>
+        </div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-amber-300">Instagram</a>
+          <a href="#" class="hover:text-amber-300">Artsy</a>
+          <a href="#" class="hover:text-amber-300">Vogue Runway</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHECKOUT MODAL OVERLAY -->
+    <div class="checkout-modal fixed inset-0 bg-black/85 backdrop-blur-md z-[9996] opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+      <div class="bg-[#121212] border border-white/15 max-w-lg w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+        <button class="close-checkout-modal absolute top-5 right-5 text-neutral-400 hover:text-white text-base">✕</button>
+        <div class="checkout-modal-body">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber-300 mb-1">Maison Checkout</p>
+          <h3 class="font-serif text-2xl text-neutral-100 mb-4">Complete Your Acquisition</h3>
+          <div class="checkout-order-summary bg-black/40 p-4 border border-white/10 mb-6 font-mono text-xs"></div>
+          <form class="checkout-form space-y-4">
+            <div class="luxury-input-group">
+              <input type="text" id="chk-name-shop" required placeholder=" " />
+              <label for="chk-name-shop">Full Recipient Name</label>
+            </div>
+            <div class="luxury-input-group">
+              <input type="email" id="chk-email-shop" required placeholder=" " />
+              <label for="chk-email-shop">Email for Dispatch & Provenance</label>
+            </div>
+            <div class="luxury-input-group">
+              <input type="text" id="chk-addr-shop" required placeholder=" " />
+              <label for="chk-addr-shop">Delivery Address</label>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="luxury-input-group">
+                <input type="text" id="chk-city-shop" required placeholder=" " />
+                <label for="chk-city-shop">City & Country</label>
+              </div>
+              <div class="luxury-input-group">
+                <input type="text" id="chk-postal-shop" required placeholder=" " />
+                <label for="chk-postal-shop">Postal Code</label>
+              </div>
+            </div>
+            <button type="submit" class="btn-luxury w-full text-xs py-3 mt-4">
+              Confirm & Place Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Scripts -->
+    <script type="module" src="/src/js/main.js"></script>
+
+    <!-- Catalog Page Specific Controller -->
+    <script type="module">
+      import { PRODUCTS, formatPrice } from '/src/js/products.js';
+
+      let activeCategory = 'All';
+      let activeSort = 'featured';
+      let activeGridColumns = 4;
+
+      const gridContainer = document.getElementById('shop-products-grid');
+      const emptyState = document.getElementById('shop-empty-state');
+      const countLabel = document.getElementById('catalog-count-label');
+      const sortSelect = document.getElementById('catalog-sort');
+      const categoryTabs = document.querySelectorAll('.filter-tab-btn');
+      const gridBtn2 = document.getElementById('grid-toggle-2');
+      const gridBtn4 = document.getElementById('grid-toggle-4');
+      const resetBtn = document.getElementById('reset-filters-btn');
+
+      // Check URL query param for category
+      const urlParams = new URLSearchParams(window.location.search);
+      const categoryParam = urlParams.get('category');
+      if (categoryParam) {
+        activeCategory = categoryParam;
+      }
+
+      function updateCategoryUI() {
+        categoryTabs.forEach(tab => {
+          if (tab.getAttribute('data-category').toLowerCase() === activeCategory.toLowerCase()) {
+            tab.className = "filter-tab-btn active px-3.5 py-1.5 text-xs font-mono uppercase tracking-wider bg-white text-black transition-colors";
+          } else {
+            tab.className = "filter-tab-btn px-3.5 py-1.5 text-xs font-mono uppercase tracking-wider text-neutral-400 hover:text-white transition-colors";
+          }
+        });
+      }
+
+      function renderCatalog() {
+        let items = [...PRODUCTS];
+
+        // Filter
+        if (activeCategory !== 'All') {
+          items = items.filter(p => p.category.toLowerCase() === activeCategory.toLowerCase());
+        }
+
+        // Sort
+        if (activeSort === 'price-asc') {
+          items.sort((a, b) => a.price - b.price);
+        } else if (activeSort === 'price-desc') {
+          items.sort((a, b) => b.price - a.price);
+        } else if (activeSort === 'newest') {
+          items.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+        }
+
+        // Update count
+        countLabel.textContent = `Showing ${items.length} ${items.length === 1 ? 'Creation' : 'Creations'}`;
+
+        if (items.length === 0) {
+          gridContainer.innerHTML = '';
+          emptyState.classList.remove('hidden');
+          return;
+        }
+
+        emptyState.classList.add('hidden');
+
+        gridContainer.innerHTML = items.map(product => `
+          <article class="group relative flex flex-col" data-cursor="VIEW">
+            <div class="product-card-image-box">
+              <a href="/product-detail.html?id=${product.id}" class="block w-full h-full">
+                <img src="${product.primaryImage}" alt="${product.name}" class="img-primary" />
+                <img src="${product.secondaryImage}" alt="${product.name} alternate view" class="img-secondary" />
+              </a>
+              <div class="absolute top-3 left-3 z-10">
+                <span class="text-[10px] font-mono tracking-widest text-neutral-300 bg-black/70 backdrop-blur-sm px-2.5 py-1 border border-white/10 uppercase">
+                  ${product.tag}
+                </span>
+              </div>
+              <div class="quick-add-btn-wrap">
+                <button data-quick-add="${product.id}" class="btn-luxury w-full text-xs py-2.5">
+                  Quick Add
+                </button>
+              </div>
+            </div>
+            
+            <div class="pt-4 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-baseline text-xs mb-1">
+                  <span class="font-mono text-neutral-400 text-[11px]">${product.code} · ${product.category}</span>
+                  <span class="font-mono text-amber-300 font-medium">${formatPrice(product.price)}</span>
+                </div>
+                <h3 class="font-serif text-lg text-neutral-100 group-hover:text-amber-200 transition-colors">
+                  <a href="/product-detail.html?id=${product.id}">${product.name}</a>
+                </h3>
+              </div>
+
+              <div class="mt-2 flex items-center justify-between text-xs text-neutral-400 pt-2 border-t border-white/5 font-mono text-[11px]">
+                <div class="flex items-center gap-1.5">
+                  ${product.colors.map(c => `
+                    <span class="w-2.5 h-2.5 rounded-full border border-white/30" style="background-color: ${c.hex};" title="${c.name}"></span>
+                  `).join('')}
+                </div>
+                <span>${product.sizes.join(' · ')}</span>
+              </div>
+            </div>
+          </article>
+        `).join('');
+      }
+
+      // Category tab click
+      categoryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          activeCategory = tab.getAttribute('data-category');
+          updateCategoryUI();
+          renderCatalog();
+        });
+      });
+
+      // Sort change
+      sortSelect.addEventListener('change', (e) => {
+        activeSort = e.target.value;
+        renderCatalog();
+      });
+
+      // Grid toggler
+      gridBtn2.addEventListener('click', () => {
+        activeGridColumns = 2;
+        gridContainer.className = "grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16 transition-all duration-300";
+        gridBtn2.classList.add('bg-white/20', 'text-white');
+        gridBtn2.classList.remove('text-neutral-400');
+        gridBtn4.classList.remove('bg-white/20', 'text-white');
+        gridBtn4.classList.add('text-neutral-400');
+      });
+
+      gridBtn4.addEventListener('click', () => {
+        activeGridColumns = 4;
+        gridContainer.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 transition-all duration-300";
+        gridBtn4.classList.add('bg-white/20', 'text-white');
+        gridBtn4.classList.remove('text-neutral-400');
+        gridBtn2.classList.remove('bg-white/20', 'text-white');
+        gridBtn2.classList.add('text-neutral-400');
+      });
+
+      resetBtn.addEventListener('click', () => {
+        activeCategory = 'All';
+        activeSort = 'featured';
+        sortSelect.value = 'featured';
+        updateCategoryUI();
+        renderCatalog();
+      });
+
+      updateCategoryUI();
+      renderCatalog();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garment Showcase — ATELIER ÉTERNEL</title>
+    <meta name="description" content="Detailed craftsmanship study and acquisition portal for Atelier Éternel garments. Hand-finished tailoring, single-origin fibers, and bespoke fitting." />
+    <meta property="og:title" content="Garment Showcase — ATELIER ÉTERNEL" />
+    <meta property="og:description" content="Detailed craftsmanship study and acquisition portal for Atelier Éternel garments." />
+    <meta property="og:type" content="product" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-[#0d0d0d] text-[#f3f3f3] selection:bg-[#c5a880] selection:text-[#0d0d0d]">
+    
+    <!-- TOP NAVIGATION BAR (Strict 3-zone contract) -->
+    <header class="site-header fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between border-b border-white/5 transition-all duration-300">
+      <a href="/index.html" class="font-display tracking-[0.22em] text-sm md:text-base font-semibold text-neutral-100 hover:text-amber-200 transition-colors uppercase">
+        Atelier Éternel
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs tracking-[0.14em] uppercase font-medium text-neutral-300">
+        <a href="/shop.html" class="editorial-link hover:text-neutral-100 transition-colors">Collections</a>
+        <a href="/lookbook.html" class="editorial-link hover:text-neutral-100 transition-colors">Lookbook</a>
+        <a href="/about.html" class="editorial-link hover:text-neutral-100 transition-colors">The Atelier</a>
+        <a href="/contact.html" class="editorial-link hover:text-neutral-100 transition-colors">Concierge</a>
+      </nav>
+
+      <div class="flex items-center gap-6 text-xs tracking-[0.14em] uppercase font-medium">
+        <button data-open-cart class="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-1.5 focus:outline-none" aria-label="Open shopping bag">
+          <span>Bag</span>
+          <span class="cart-count-badge font-mono text-[11px] text-amber-300">(0)</span>
+        </button>
+        <button data-open-menu class="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-2 focus:outline-none" aria-label="Open menu overlay">
+          <span class="hidden sm:inline">Index</span>
+          <span class="text-base leading-none">☰</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN PRODUCT DETAIL VIEW -->
+    <main class="pt-28 md:pt-36 pb-28 px-6 md:px-12 max-w-7xl mx-auto">
+      
+      <!-- Breadcrumb navigation -->
+      <nav class="flex items-center gap-2 text-xs font-mono text-neutral-400 mb-8" aria-label="Breadcrumb">
+        <a href="/index.html" class="hover:text-amber-300 transition-colors">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="/shop.html" class="hover:text-amber-300 transition-colors">Collections</a>
+        <span aria-hidden="true">/</span>
+        <span id="pdp-breadcrumb-category" class="text-neutral-400">Outerwear</span>
+        <span aria-hidden="true">/</span>
+        <span id="pdp-breadcrumb-name" class="text-neutral-200">L'Overcoat Cashmere Sculptural</span>
+      </nav>
+
+      <!-- DUAL-COLUMN LAYOUT -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- LEFT COLUMN: Sticky Image Gallery -->
+        <div class="lg:col-span-7 flex flex-col-reverse md:flex-row gap-4 lg:sticky lg:top-28">
+          
+          <!-- Thumbnail Strip -->
+          <div id="pdp-thumbnail-strip" class="flex md:flex-col gap-3 overflow-x-auto md:overflow-y-auto shrink-0 md:w-20 pb-2 md:pb-0">
+            <!-- Rendered dynamically -->
+          </div>
+
+          <!-- Main Zoomable Viewport -->
+          <div class="flex-1 relative aspect-[3/4] bg-[#141414] border border-white/10 overflow-hidden group" data-cursor="ZOOM">
+            <img id="pdp-main-image" src="/src/assets/images/lookbook_coat_sculpture_1790884606896.jpg" alt="Garment main preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm px-3 py-1.5 text-[10px] font-mono uppercase tracking-widest text-neutral-300 border border-white/10">
+              Interactive Zoom
+            </div>
+            <div id="pdp-badge-tag" class="absolute top-4 right-4 bg-amber-300 text-black font-mono text-[10px] uppercase font-bold tracking-widest px-2.5 py-1">
+              Archival
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Purchase Module & Craft Accordions -->
+        <div class="lg:col-span-5 flex flex-col">
+          
+          <!-- Header & Pricing -->
+          <div class="border-b border-white/10 pb-6 mb-6">
+            <div class="flex items-center gap-2 text-xs font-mono text-amber-300 uppercase tracking-widest mb-2">
+              <span id="pdp-code">AE-26-01</span>
+              <span>·</span>
+              <span id="pdp-category">Outerwear</span>
+              <span>·</span>
+              <span>Paris Atelier</span>
+            </div>
+            <h1 id="pdp-title" class="font-serif-luxury text-3xl sm:text-4xl text-neutral-100 tracking-tight leading-tight mb-3">
+              L'Overcoat Cashmere Sculptural
+            </h1>
+            <div class="flex items-baseline gap-4 font-mono">
+              <span id="pdp-price" class="text-2xl text-amber-300 font-medium">€1,850</span>
+              <span class="text-xs text-neutral-400">Taxes & Courier Included</span>
+            </div>
+          </div>
+
+          <!-- Lead Description -->
+          <p id="pdp-description" class="text-sm text-neutral-300 leading-relaxed font-light mb-8">
+            Double-faced 100% Grade-A Mongolian cashmere tailored with an architectural dropped shoulder, sculpted lapels, and hand-finished pick stitching. Engineered without rigid canvassing for a statuesque yet unencumbered fluid drape.
+          </p>
+
+          <!-- Swatch Selectors -->
+          <div class="mb-6">
+            <div class="flex justify-between items-baseline mb-2.5">
+              <span class="text-xs font-mono uppercase tracking-widest text-neutral-300">Selected Color:</span>
+              <span id="pdp-active-color-name" class="text-xs font-mono text-amber-300">Obsidian Black</span>
+            </div>
+            <div id="pdp-color-swatches" class="flex items-center gap-3">
+              <!-- Swatches rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="mb-8">
+            <div class="flex justify-between items-baseline mb-2.5">
+              <span class="text-xs font-mono uppercase tracking-widest text-neutral-300">Select Size:</span>
+              <button data-open-size-guide class="editorial-link text-[11px] font-mono text-neutral-400 hover:text-amber-300 underline uppercase">
+                Size Guide & Bespoke Fit
+              </button>
+            </div>
+            <div id="pdp-size-pills" class="grid grid-cols-5 gap-2">
+              <!-- Sizes rendered dynamically -->
+            </div>
+            <span id="pdp-size-error" class="hidden text-xs font-mono text-red-400 mt-2 block">Please select an archival size to proceed</span>
+          </div>
+
+          <!-- Primary Actions -->
+          <div class="space-y-3 mb-10">
+            <button id="pdp-add-to-bag-btn" class="btn-luxury w-full text-xs py-3.5 tracking-[0.2em]">
+              Acquire & Add To Bag
+            </button>
+            <a href="/contact.html#vip" class="btn-luxury-outline w-full text-xs py-3 text-center block">
+              Book Private Salon Fitting
+            </a>
+          </div>
+
+          <!-- House Guarantees Bar -->
+          <div class="grid grid-cols-3 gap-3 py-4 border-y border-white/10 text-center font-mono text-[10px] text-neutral-400 mb-8">
+            <div>
+              <span class="block text-amber-300 text-xs mb-0.5">✦</span>
+              <span>Express Courier</span>
+            </div>
+            <div>
+              <span class="block text-amber-300 text-xs mb-0.5">✦</span>
+              <span>Complimentary Returns</span>
+            </div>
+            <div>
+              <span class="block text-amber-300 text-xs mb-0.5">✦</span>
+              <span>Paris Atelier Tailoring</span>
+            </div>
+          </div>
+
+          <!-- Collapsible Accordion Tabs -->
+          <div class="border-t border-white/10 divide-y divide-white/10">
+            
+            <!-- Tab 1 -->
+            <div class="accordion-item open py-4">
+              <button class="accordion-header flex items-center justify-between w-full text-left font-serif text-lg text-neutral-100 focus:outline-none">
+                <span>Materiality & Care</span>
+                <span class="accordion-icon text-amber-300 text-xl font-light leading-none">+</span>
+              </button>
+              <div class="accordion-content text-xs text-neutral-300 font-light leading-relaxed pt-3">
+                <p id="pdp-fabric-care">
+                  100% Grade-A Mongolian Cashmere (480gsm density). Spun in Biella, Italy. Unlined interior with contrast silk-bound seams. Dry clean by luxury garment specialist only. Do not wash or tumble dry. Store on the included cedar wood hanger.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tab 2 -->
+            <div class="accordion-item py-4">
+              <button class="accordion-header flex items-center justify-between w-full text-left font-serif text-lg text-neutral-100 focus:outline-none">
+                <span>Sustainable Traceability</span>
+                <span class="accordion-icon text-amber-300 text-xl font-light leading-none">+</span>
+              </button>
+              <div class="accordion-content text-xs text-neutral-300 font-light leading-relaxed pt-3">
+                <p id="pdp-sustainability">
+                  Traceable single-origin cashmere shorn ethically from pastoral cooperatives in Ulaanbaatar. GOTS-certified dyeing process with zero heavy metal mordants. Produced in limited batches of 45 pieces per seasonal run.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tab 3 -->
+            <div class="accordion-item py-4">
+              <button class="accordion-header flex items-center justify-between w-full text-left font-serif text-lg text-neutral-100 focus:outline-none">
+                <span>White-Glove Shipping & Returns</span>
+                <span class="accordion-icon text-amber-300 text-xl font-light leading-none">+</span>
+              </button>
+              <div class="accordion-content text-xs text-neutral-300 font-light leading-relaxed pt-3">
+                <p id="pdp-shipping">
+                  Complimentary worldwide express shipping via carbon-neutral courier. Delivered in archival linen garment box with brass zip lock. 30-day private white-glove returns or exchange at any flagship atelier.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- COMPANION PIECES -->
+      <section class="mt-28 pt-16 border-t border-white/10">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-widest text-amber-300 block mb-1">Curation</span>
+            <h2 class="font-serif-luxury text-2xl sm:text-3xl text-neutral-100">Complementary Silhouettes</h2>
+          </div>
+          <a href="/shop.html" class="editorial-link text-xs uppercase tracking-widest text-neutral-400 hover:text-white">
+            View All Pieces →
+          </a>
+        </div>
+
+        <div id="pdp-companion-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Companion cards rendered dynamically -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SIZE GUIDE MODAL -->
+    <div class="size-guide-modal fixed inset-0 bg-black/85 backdrop-blur-md z-[9996] opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+      <div class="bg-[#121212] border border-white/15 max-w-2xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+        <button class="close-size-guide absolute top-5 right-5 text-neutral-400 hover:text-white text-base">✕</button>
+        <p class="font-mono text-xs uppercase tracking-widest text-amber-300 mb-1">Bespoke Fit Codex</p>
+        <h3 class="font-serif text-2xl text-neutral-100 mb-4">Garment Measurement Reference</h3>
+        <p class="text-xs text-neutral-400 mb-6 font-light">All measurements are documented in centimeters (cm). Our outerwear is cut with an architectural, oversized drape. For a close traditional fit, we recommend selecting one size below your typical size.</p>
+        
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-left font-mono text-xs text-neutral-300 border-collapse">
+            <thead>
+              <tr class="border-b border-white/20 text-amber-300 uppercase tracking-wider text-[11px]">
+                <th class="py-2 pr-4">Size</th>
+                <th class="py-2 px-4">Chest (cm)</th>
+                <th class="py-2 px-4">Shoulder (cm)</th>
+                <th class="py-2 px-4">Sleeve (cm)</th>
+                <th class="py-2 pl-4">Length (cm)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/10">
+              <tr>
+                <td class="py-2.5 pr-4 font-bold text-white">XS (44 EU)</td>
+                <td class="py-2.5 px-4">112</td>
+                <td class="py-2.5 px-4">50</td>
+                <td class="py-2.5 px-4">63</td>
+                <td class="py-2.5 pl-4">120</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 pr-4 font-bold text-white">S (46 EU)</td>
+                <td class="py-2.5 px-4">116</td>
+                <td class="py-2.5 px-4">52</td>
+                <td class="py-2.5 px-4">64</td>
+                <td class="py-2.5 pl-4">122</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 pr-4 font-bold text-white">M (48 EU)</td>
+                <td class="py-2.5 px-4">120</td>
+                <td class="py-2.5 px-4">54</td>
+                <td class="py-2.5 px-4">65</td>
+                <td class="py-2.5 pl-4">124</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 pr-4 font-bold text-white">L (50 EU)</td>
+                <td class="py-2.5 px-4">124</td>
+                <td class="py-2.5 px-4">56</td>
+                <td class="py-2.5 px-4">66</td>
+                <td class="py-2.5 pl-4">126</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 pr-4 font-bold text-white">XL (52 EU)</td>
+                <td class="py-2.5 px-4">128</td>
+                <td class="py-2.5 px-4">58</td>
+                <td class="py-2.5 px-4">67</td>
+                <td class="py-2.5 pl-4">128</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="p-4 bg-white/5 border border-white/10 text-xs text-neutral-300 font-mono">
+          <span class="text-amber-300 font-bold block mb-1">Complimentary In-Atelier Adjustments</span>
+          Upon receipt of your garment, visit any Atelier Éternel flagship in Paris, Tokyo, New York, or Milan for complimentary bespoke hem adjustments and sleeve tailoring.
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-[#0a0a0a] pt-16 pb-12 px-6 md:px-16 text-xs text-neutral-400 font-light">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="md:col-span-1">
+          <span class="font-display tracking-[0.22em] text-sm font-semibold text-neutral-100 uppercase block mb-4">
+            Atelier Éternel
+          </span>
+          <p class="leading-relaxed text-neutral-400 mb-4">
+            Haute couture and avant-garde tailoring sculpted in our Paris atelier. Uncompromising tactile purity.
+          </p>
+          <span class="font-mono text-[11px] text-amber-300">24 Rue du Faubourg Saint-Honoré, Paris</span>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">Collections</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/shop.html" class="hover:text-amber-200 transition-colors">Autumn/Winter 2026</a></li>
+            <li><a href="/shop.html?category=Outerwear" class="hover:text-amber-200 transition-colors">Outerwear & Coats</a></li>
+            <li><a href="/shop.html?category=Tailoring" class="hover:text-amber-200 transition-colors">Bespoke Tailoring</a></li>
+            <li><a href="/shop.html?category=Knitwear" class="hover:text-amber-200 transition-colors">Geelong Knitwear</a></li>
+            <li><a href="/shop.html?category=Accessories" class="hover:text-amber-200 transition-colors">Leather & Silk Objects</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">House & Atelier</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/about.html" class="hover:text-amber-200 transition-colors">The Philosophy</a></li>
+            <li><a href="/about.html#craft" class="hover:text-amber-200 transition-colors">Artisanal Savoir-Faire</a></li>
+            <li><a href="/lookbook.html" class="hover:text-amber-200 transition-colors">Campaign Lookbook</a></li>
+            <li><a href="/contact.html" class="hover:text-amber-200 transition-colors">Flagship Ateliers</a></li>
+            <li><a href="/contact.html#vip" class="hover:text-amber-200 transition-colors">Private VIP Styling</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">Concierge & Care</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/contact.html" class="hover:text-amber-200 transition-colors">Client Services</a></li>
+            <li><span class="text-neutral-500">concierge@ateliereternel.com</span></li>
+            <li><span class="text-neutral-500">+33 1 42 68 50 00</span></li>
+            <li><span class="text-neutral-500">Complimentary Global Returns</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-neutral-500">
+        <div>© 2026 ATELIER ÉTERNEL PARIS. All rights reserved.</div>
+        <div class="flex gap-6">
+          <span>Terms of Maison</span>
+          <span>Traceability Codex</span>
+          <span>Privacy Protocol</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div class="cart-drawer-overlay"></div>
+    <aside class="cart-drawer-panel" aria-label="Shopping Bag">
+      <div class="p-6 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="font-serif text-lg tracking-wide text-neutral-100">Shopping Bag</span>
+          <span class="cart-count-badge font-mono text-xs text-amber-300">(0)</span>
+        </div>
+        <button data-close-cart class="text-neutral-400 hover:text-white p-2 text-sm focus:outline-none" aria-label="Close cart drawer">
+          ✕
+        </button>
+      </div>
+
+      <div class="px-6 py-3 bg-white/5 border-b border-white/10">
+        <div class="text-[11px] font-mono text-neutral-300 cart-shipping-text mb-1.5">
+          Complimentary courier delivery on all orders over €500
+        </div>
+        <div class="w-full bg-white/10 h-1 overflow-hidden">
+          <div class="cart-shipping-bar bg-amber-300 h-full transition-all duration-500 w-0"></div>
+        </div>
+      </div>
+
+      <div class="cart-items-container flex-1 overflow-y-auto px-6 divide-y divide-white/5"></div>
+
+      <div class="p-6 border-t border-white/10 bg-[#0f0f0f] space-y-4">
+        <div class="flex gap-2">
+          <input type="text" placeholder="Privilege Code (e.g. ETERNEL10)" class="cart-promo-input bg-black border border-white/15 px-3 py-2 text-xs font-mono text-neutral-200 placeholder:text-neutral-600 focus:outline-none focus:border-amber-300 flex-1 uppercase" />
+          <button class="cart-promo-apply-btn btn-luxury-outline text-xs px-3 py-2">Apply</button>
+        </div>
+        <span class="cart-promo-msg hidden"></span>
+
+        <div class="space-y-1.5 text-xs text-neutral-400 font-mono">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span class="cart-subtotal-price text-neutral-200">€0</span>
+          </div>
+          <div class="cart-discount-row flex justify-between text-amber-300" style="display: none;">
+            <span>VIP Privilege (10%)</span>
+            <span class="cart-discount-amount">-€0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Courier Dispatch</span>
+            <span class="text-neutral-200">Complimentary</span>
+          </div>
+          <div class="flex justify-between text-sm text-neutral-100 pt-2 border-t border-white/10 font-serif">
+            <span>Total</span>
+            <span class="cart-final-total font-mono text-amber-300">€0</span>
+          </div>
+        </div>
+
+        <button class="cart-checkout-btn btn-luxury w-full text-xs">
+          Proceed To Checkout
+        </button>
+      </div>
+    </aside>
+
+    <!-- FULLSCREEN ANIMATED OVERLAY MENU -->
+    <div class="menu-overlay" aria-label="Main Site Navigation">
+      <div class="flex justify-between items-center w-full">
+        <span class="font-display text-sm tracking-[0.22em] text-neutral-300 uppercase">
+          Index · Maison
+        </span>
+        <button data-close-menu class="text-neutral-400 hover:text-white text-xl p-2 focus:outline-none" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-6 sm:gap-8 my-auto">
+        <a href="/index.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          01. Editorial Home
+        </a>
+        <a href="/shop.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          02. All Collections
+        </a>
+        <a href="/lookbook.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          03. Campaign Lookbook
+        </a>
+        <a href="/about.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          04. Philosophy & Atelier
+        </a>
+        <a href="/contact.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          05. Concierge & Flagships
+        </a>
+      </nav>
+
+      <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 text-xs font-mono text-neutral-400 border-t border-white/10 pt-6">
+        <div>
+          <div>Paris Marais · Tokyo Aoyama · New York SoHo · Milano Montenapoleone</div>
+          <div class="text-neutral-500 mt-1">Concierge Line: +33 1 42 68 50 00</div>
+        </div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-amber-300">Instagram</a>
+          <a href="#" class="hover:text-amber-300">Artsy</a>
+          <a href="#" class="hover:text-amber-300">Vogue Runway</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Scripts -->
+    <script type="module" src="/src/js/main.js"></script>
+
+    <!-- PDP Specific Controller -->
+    <script type="module">
+      import { PRODUCTS, addToCart, formatPrice } from '/src/js/products.js';
+      import { showToast } from '/src/js/main.js';
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id') || 'ae-01';
+      const product = PRODUCTS.find(p => p.id === productId) || PRODUCTS[0];
+
+      let selectedSize = null;
+      let selectedColor = product.colors[0];
+
+      // Update page title
+      document.title = `${product.name} — ATELIER ÉTERNEL`;
+
+      // Fill text fields
+      document.getElementById('pdp-breadcrumb-category').textContent = product.category;
+      document.getElementById('pdp-breadcrumb-name').textContent = product.name;
+      document.getElementById('pdp-code').textContent = product.code;
+      document.getElementById('pdp-category').textContent = product.category;
+      document.getElementById('pdp-title').textContent = product.name;
+      document.getElementById('pdp-price').textContent = formatPrice(product.price);
+      document.getElementById('pdp-description').textContent = product.description;
+      document.getElementById('pdp-fabric-care').textContent = product.fabricCare;
+      document.getElementById('pdp-sustainability').textContent = product.sustainability;
+      document.getElementById('pdp-shipping').textContent = product.shippingReturns;
+      document.getElementById('pdp-badge-tag').textContent = product.tag;
+      document.getElementById('pdp-active-color-name').textContent = selectedColor.name;
+
+      // Main image
+      const mainImg = document.getElementById('pdp-main-image');
+      mainImg.src = product.primaryImage;
+      mainImg.alt = product.name;
+
+      // Thumbnails
+      const thumbStrip = document.getElementById('pdp-thumbnail-strip');
+      thumbStrip.innerHTML = product.gallery.map((imgUrl, i) => `
+        <button class="pdp-thumb-btn w-16 h-20 bg-neutral-900 border ${i === 0 ? 'border-amber-300' : 'border-white/10 hover:border-white/40'} shrink-0 overflow-hidden focus:outline-none transition-colors" data-src="${imgUrl}">
+          <img src="${imgUrl}" alt="Angle ${i+1}" class="w-full h-full object-cover" />
+        </button>
+      `).join('');
+
+      thumbStrip.querySelectorAll('.pdp-thumb-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const src = btn.getAttribute('data-src');
+          mainImg.src = src;
+          thumbStrip.querySelectorAll('.pdp-thumb-btn').forEach(b => {
+            b.className = "pdp-thumb-btn w-16 h-20 bg-neutral-900 border border-white/10 hover:border-white/40 shrink-0 overflow-hidden focus:outline-none transition-colors";
+          });
+          btn.className = "pdp-thumb-btn w-16 h-20 bg-neutral-900 border border-amber-300 shrink-0 overflow-hidden focus:outline-none transition-colors";
+        });
+      });
+
+      // Swatches
+      const swatchContainer = document.getElementById('pdp-color-swatches');
+      swatchContainer.innerHTML = product.colors.map((c, i) => `
+        <button class="pdp-swatch-btn flex items-center gap-2 px-3 py-1.5 border ${i === 0 ? 'border-amber-300 bg-white/5' : 'border-white/15 hover:border-white/40'} text-xs font-mono text-neutral-300 transition-colors" data-name="${c.name}" data-img="${c.image}">
+          <span class="w-3 h-3 rounded-full border border-white/30" style="background-color: ${c.hex};"></span>
+          <span>${c.name}</span>
+        </button>
+      `).join('');
+
+      swatchContainer.querySelectorAll('.pdp-swatch-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const name = btn.getAttribute('data-name');
+          const img = btn.getAttribute('data-img');
+          selectedColor = product.colors.find(c => c.name === name);
+          document.getElementById('pdp-active-color-name').textContent = name;
+          if (img) mainImg.src = img;
+
+          swatchContainer.querySelectorAll('.pdp-swatch-btn').forEach(b => {
+            b.className = "pdp-swatch-btn flex items-center gap-2 px-3 py-1.5 border border-white/15 hover:border-white/40 text-xs font-mono text-neutral-300 transition-colors";
+          });
+          btn.className = "pdp-swatch-btn flex items-center gap-2 px-3 py-1.5 border border-amber-300 bg-white/5 text-xs font-mono text-neutral-300 transition-colors";
+        });
+      });
+
+      // Sizes
+      const sizeContainer = document.getElementById('pdp-size-pills');
+      sizeContainer.innerHTML = product.sizes.map(s => `
+        <button class="pdp-size-btn border border-white/15 hover:border-white/50 text-xs font-mono py-2 text-center text-neutral-300 transition-colors" data-size="${s}">
+          ${s}
+        </button>
+      `).join('');
+
+      sizeContainer.querySelectorAll('.pdp-size-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          selectedSize = btn.getAttribute('data-size');
+          document.getElementById('pdp-size-error').classList.add('hidden');
+          sizeContainer.querySelectorAll('.pdp-size-btn').forEach(b => {
+            b.className = "pdp-size-btn border border-white/15 hover:border-white/50 text-xs font-mono py-2 text-center text-neutral-300 transition-colors";
+          });
+          btn.className = "pdp-size-btn border border-amber-300 bg-amber-300 text-black font-bold text-xs font-mono py-2 text-center transition-colors";
+        });
+      });
+
+      // Add To Bag Button
+      const addBtn = document.getElementById('pdp-add-to-bag-btn');
+      addBtn.addEventListener('click', () => {
+        if (!selectedSize && product.sizes.length > 1) {
+          document.getElementById('pdp-size-error').classList.remove('hidden');
+          return;
+        }
+        const finalSize = selectedSize || product.sizes[0];
+        addToCart(product, finalSize, selectedColor.name, 1);
+        showToast(`Added ${product.name} (${finalSize} · ${selectedColor.name}) to bag`);
+        
+        // Open Cart Drawer
+        const overlay = document.querySelector('.cart-drawer-overlay');
+        const panel = document.querySelector('.cart-drawer-panel');
+        if (overlay && panel) {
+          overlay.classList.add('active');
+          panel.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+
+      // Companion Products Grid
+      const companions = PRODUCTS.filter(p => p.id !== product.id).slice(0, 4);
+      const companionGrid = document.getElementById('pdp-companion-grid');
+      companionGrid.innerHTML = companions.map(comp => `
+        <article class="group relative flex flex-col">
+          <div class="product-card-image-box">
+            <a href="/product-detail.html?id=${comp.id}">
+              <img src="${comp.primaryImage}" alt="${comp.name}" class="img-primary" />
+              <img src="${comp.secondaryImage}" alt="${comp.name} alternate" class="img-secondary" />
+            </a>
+            <div class="quick-add-btn-wrap">
+              <button data-quick-add="${comp.id}" class="btn-luxury w-full text-xs py-2">Quick Add</button>
+            </div>
+          </div>
+          <div class="pt-3">
+            <div class="flex justify-between items-baseline text-xs mb-1 font-mono">
+              <span class="text-neutral-400 text-[11px]">${comp.category}</span>
+              <span class="text-amber-300">${formatPrice(comp.price)}</span>
+            </div>
+            <h3 class="font-serif text-base text-neutral-100 group-hover:text-amber-200 transition-colors">
+              <a href="/product-detail.html?id=${comp.id}">${comp.name}</a>
+            </h3>
+          </div>
+        </article>
+      `).join('');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATELIER ÉTERNEL — Haute Couture & Avant-Garde Tailoring</title>
+    <meta name="description" content="Ultra-aesthetic luxury fashion house website featuring seasonal editorial campaigns, artisanal lookbook, multi-view collections catalog, bespoke product showcases, and private styling concierge." />
+    <meta property="og:title" content="ATELIER ÉTERNEL — Haute Couture & Avant-Garde Tailoring" />
+    <meta property="og:description" content="Ultra-aesthetic luxury fashion house website featuring seasonal editorial campaigns, artisanal lookbook, multi-view collections catalog, bespoke product showcases, and private styling concierge." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-[#0d0d0d] text-[#f3f3f3] selection:bg-[#c5a880] selection:text-[#0d0d0d]">
+    
+    <!-- TOP NAVIGATION BAR (Strict 3-zone contract) -->
+    <header class="site-header fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between border-b border-white/5 transition-all duration-300">
+      <!-- Zone 1: Single text element wordmark -->
+      <a href="/index.html" class="font-display tracking-[0.22em] text-sm md:text-base font-semibold text-neutral-100 hover:text-amber-200 transition-colors uppercase">
+        Atelier Éternel
+      </a>
+
+      <!-- Zone 2: 4-5 clean text navigation links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs tracking-[0.14em] uppercase font-medium text-neutral-300">
+        <a href="/shop.html" class="editorial-link hover:text-neutral-100 transition-colors">Collections</a>
+        <a href="/lookbook.html" class="editorial-link hover:text-neutral-100 transition-colors">Lookbook</a>
+        <a href="/about.html" class="editorial-link hover:text-neutral-100 transition-colors">The Atelier</a>
+        <a href="/contact.html" class="editorial-link hover:text-neutral-100 transition-colors">Concierge</a>
+      </nav>
+
+      <!-- Zone 3: 2 primary actions -->
+      <div class="flex items-center gap-6 text-xs tracking-[0.14em] uppercase font-medium">
+        <button data-open-cart class="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-1.5 focus:outline-none" aria-label="Open shopping bag">
+          <span>Bag</span>
+          <span class="cart-count-badge font-mono text-[11px] text-amber-300">(0)</span>
+        </button>
+        <button data-open-menu class="text-neutral-200 hover:text-amber-300 transition-colors flex items-center gap-2 focus:outline-none" aria-label="Open menu overlay">
+          <span class="hidden sm:inline">Index</span>
+          <span class="text-base leading-none">☰</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN EDITORIAL CONTENT -->
+    <main class="relative pt-0">
+      
+      <!-- HERO EDITORIAL CAROUSEL -->
+      <section class="relative h-screen min-h-[640px] flex items-end pb-16 md:pb-24 px-6 md:px-16 overflow-hidden">
+        <!-- Background Slider Images -->
+        <div class="hero-slider-container absolute inset-0 z-0">
+          <div class="hero-slide active absolute inset-0 transition-opacity duration-1000 opacity-100">
+            <img src="/src/assets/images/hero_luxury_fashion_1790884647993.jpg" alt="Atelier Éternel Autumn/Winter 2026 Campaign" class="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.05]" />
+          </div>
+          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+            <img src="/src/assets/images/lookbook_coat_sculpture_1790884606896.jpg" alt="Volumetric Architectural Tailoring" class="w-full h-full object-cover object-center filter brightness-[0.75]" />
+          </div>
+          <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1600&auto=format&fit=crop" alt="Avant-Garde Noir Silhouette" class="w-full h-full object-cover object-center filter brightness-[0.72]" />
+          </div>
+          <!-- Measured Scrim for WCAG AA contrast -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-black/40 to-black/30"></div>
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div class="max-w-2xl">
+            <div class="flex items-center gap-3 text-xs tracking-[0.2em] font-mono text-amber-300/90 mb-4 uppercase">
+              <span>Collection 2026</span>
+              <span aria-hidden="true">/</span>
+              <span>Paris 8ème</span>
+              <span aria-hidden="true">/</span>
+              <span>Edition Limitée</span>
+            </div>
+            <h1 class="font-serif-luxury text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-neutral-100 balance-wrap">
+              Sculpting The Timeless Monolith.
+            </h1>
+            <p class="text-sm md:text-base text-neutral-300 mt-6 max-w-lg leading-relaxed font-light">
+              Bespoke outerwear and architectural tailoring crafted from single-origin Mongolian cashmere and English fresco wool.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <a href="/shop.html" class="btn-luxury" data-cursor="EXPLORE">
+              Explore Collection
+            </a>
+            <a href="/lookbook.html" class="btn-luxury-outline" data-cursor="CAMPAIGN">
+              View Lookbook
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide Indicators & Scroll Prompt -->
+        <div class="absolute bottom-6 left-6 md:left-16 right-6 md:right-16 z-10 flex items-center justify-between text-[11px] font-mono tracking-widest text-neutral-400">
+          <div class="flex items-center gap-2">
+            <button class="hero-dot active text-amber-300 font-bold" data-slide="0">01</button>
+            <span>/</span>
+            <button class="hero-dot hover:text-white transition-colors" data-slide="1">02</button>
+            <span>/</span>
+            <button class="hero-dot hover:text-white transition-colors" data-slide="2">03</button>
+          </div>
+          <div class="hidden sm:flex items-center gap-2 uppercase tracking-[0.2em] text-[10px]">
+            <span>Scroll To Descend</span>
+            <span class="animate-bounce">↓</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFINITE SMOOTH MARQUEE -->
+      <section class="py-4 border-y border-white/10 bg-[#121212] overflow-hidden select-none" aria-hidden="true">
+        <div class="marquee-track flex whitespace-nowrap gap-12 font-mono text-xs uppercase tracking-[0.25em] text-neutral-400">
+          <span>Autumn / Winter 2026</span>
+          <span class="text-amber-300">✦</span>
+          <span>Sustainably Crafted in Paris</span>
+          <span class="text-amber-300">✦</span>
+          <span>Single-Origin Grade-A Cashmere</span>
+          <span class="text-amber-300">✦</span>
+          <span>Complimentary Worldwide Courier</span>
+          <span class="text-amber-300">✦</span>
+          <span>Archival Restock Available</span>
+          <span class="text-amber-300">✦</span>
+          <span>Autumn / Winter 2026</span>
+          <span class="text-amber-300">✦</span>
+          <span>Sustainably Crafted in Paris</span>
+          <span class="text-amber-300">✦</span>
+          <span>Single-Origin Grade-A Cashmere</span>
+          <span class="text-amber-300">✦</span>
+          <span>Complimentary Worldwide Courier</span>
+          <span class="text-amber-300">✦</span>
+          <span>Archival Restock Available</span>
+        </div>
+      </section>
+
+      <!-- BRAND MANIFESTO SECTION -->
+      <section class="py-24 md:py-36 px-6 md:px-16 max-w-5xl mx-auto text-center reveal-init">
+        <p class="font-mono text-xs uppercase tracking-[0.25em] text-amber-300 mb-6">
+          The Atelier Manifesto
+        </p>
+        <blockquote class="font-serif-luxury text-2xl sm:text-4xl md:text-5xl tracking-tight leading-[1.25] text-neutral-100 balance-wrap">
+          “We do not manufacture garments for transient seasons. We sculpt silhouettes for posterity—marrying architectural discipline with raw, uncompromised artisanal tactile poetry.”
+        </blockquote>
+        <div class="mt-8 flex items-center justify-center gap-4 text-xs font-mono text-neutral-400 tracking-wider">
+          <span>Jean-Philippe Moreau</span>
+          <span aria-hidden="true">·</span>
+          <span>Founder & Master Cutter</span>
+          <span aria-hidden="true">·</span>
+          <span>Paris 8ème</span>
+        </div>
+      </section>
+
+      <!-- NEW ARRIVALS HORIZONTAL SHOWCASE -->
+      <section class="py-16 md:py-24 border-t border-white/10 bg-[#0d0d0d]">
+        <div class="px-6 md:px-16 max-w-7xl mx-auto flex items-end justify-between mb-12">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono tracking-widest text-amber-300 uppercase mb-2">
+              <span>Curated Selection</span>
+              <span>·</span>
+              <span>New Arrivals</span>
+            </div>
+            <h2 class="font-serif-luxury text-3xl md:text-5xl text-neutral-100 tracking-tight">
+              Archival Editions
+            </h2>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="/shop.html" class="editorial-link text-xs tracking-widest uppercase text-neutral-300 hover:text-amber-200">
+              View All 8 Pieces →
+            </a>
+          </div>
+        </div>
+
+        <!-- Horizontal scroll card row -->
+        <div class="px-6 md:px-16 max-w-7xl mx-auto">
+          <div class="horizontal-scroll-snap flex gap-6 pb-6" data-cursor="DRAG">
+            
+            <!-- Card 1 -->
+            <article class="w-[280px] sm:w-[340px] shrink-0 group">
+              <div class="product-card-image-box">
+                <img src="/src/assets/images/lookbook_coat_sculpture_1790884606896.jpg" alt="L'Overcoat Cashmere Sculptural" class="img-primary" />
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1600&auto=format&fit=crop" alt="Overcoat drape" class="img-secondary" />
+                <div class="quick-add-btn-wrap">
+                  <button data-quick-add="ae-01" class="btn-luxury w-full text-xs py-2">Quick Add</button>
+                </div>
+              </div>
+              <div class="pt-4 flex flex-col gap-1">
+                <div class="flex justify-between items-baseline text-xs">
+                  <span class="font-mono text-neutral-400">AE-26-01 · Outerwear</span>
+                  <span class="font-mono text-amber-300">€1,850</span>
+                </div>
+                <h3 class="font-serif text-lg text-neutral-100 group-hover:text-amber-200 transition-colors">
+                  <a href="/product-detail.html?id=ae-01">L'Overcoat Cashmere Sculptural</a>
+                </h3>
+                <p class="text-xs text-neutral-400">100% Grade-A Mongolian Cashmere</p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="w-[280px] sm:w-[340px] shrink-0 group">
+              <div class="product-card-image-box">
+                <img src="/src/assets/images/product_tailored_blazer_1790884620331.jpg" alt="Le Blazer Déconstruit en Laine" class="img-primary" />
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop" alt="Blazer editorial" class="img-secondary" />
+                <div class="quick-add-btn-wrap">
+                  <button data-quick-add="ae-02" class="btn-luxury w-full text-xs py-2">Quick Add</button>
+                </div>
+              </div>
+              <div class="pt-4 flex flex-col gap-1">
+                <div class="flex justify-between items-baseline text-xs">
+                  <span class="font-mono text-neutral-400">AE-26-02 · Tailoring</span>
+                  <span class="font-mono text-amber-300">€1,240</span>
+                </div>
+                <h3 class="font-serif text-lg text-neutral-100 group-hover:text-amber-200 transition-colors">
+                  <a href="/product-detail.html?id=ae-02">Le Blazer Déconstruit en Laine</a>
+                </h3>
+                <p class="text-xs text-neutral-400">Floating Horsehair Chest Canvas</p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="w-[280px] sm:w-[340px] shrink-0 group">
+              <div class="product-card-image-box">
+                <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=1000&auto=format&fit=crop" alt="La Veste Cuir Minimaliste" class="img-primary" />
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1600&auto=format&fit=crop" alt="Leather jacket detail" class="img-secondary" />
+                <div class="quick-add-btn-wrap">
+                  <button data-quick-add="ae-03" class="btn-luxury w-full text-xs py-2">Quick Add</button>
+                </div>
+              </div>
+              <div class="pt-4 flex flex-col gap-1">
+                <div class="flex justify-between items-baseline text-xs">
+                  <span class="font-mono text-neutral-400">AE-26-03 · Outerwear</span>
+                  <span class="font-mono text-amber-300">€2,100</span>
+                </div>
+                <h3 class="font-serif text-lg text-neutral-100 group-hover:text-amber-200 transition-colors">
+                  <a href="/product-detail.html?id=ae-03">La Veste Cuir Minimaliste</a>
+                </h3>
+                <p class="text-xs text-neutral-400">Vegetable-Tanned French Calfskin</p>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="w-[280px] sm:w-[340px] shrink-0 group">
+              <div class="product-card-image-box">
+                <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?q=80&w=1000&auto=format&fit=crop" alt="Le Pantalon Large Pleated" class="img-primary" />
+                <img src="/src/assets/images/product_tailored_blazer_1790884620331.jpg" alt="Pantalon silhouette" class="img-secondary" />
+                <div class="quick-add-btn-wrap">
+                  <button data-quick-add="ae-04" class="btn-luxury w-full text-xs py-2">Quick Add</button>
+                </div>
+              </div>
+              <div class="pt-4 flex flex-col gap-1">
+                <div class="flex justify-between items-baseline text-xs">
+                  <span class="font-mono text-neutral-400">AE-26-04 · Tailoring</span>
+                  <span class="font-mono text-amber-300">€680</span>
+                </div>
+                <h3 class="font-serif text-lg text-neutral-100 group-hover:text-amber-200 transition-colors">
+                  <a href="/product-detail.html?id=ae-04">Le Pantalon Large Pleated</a>
+                </h3>
+                <p class="text-xs text-neutral-400">320g High-Twist Fresco Wool</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE EDITORIAL LOOKBOOK BANNER (Parallax Depth) -->
+      <section class="relative py-28 md:py-44 px-6 md:px-16 overflow-hidden bg-[#101010] border-t border-white/10 reveal-init">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 z-10">
+            <span class="font-mono text-xs uppercase tracking-[0.25em] text-amber-300 mb-3 block">
+              Editorial Campaign
+            </span>
+            <h2 class="font-serif-luxury text-4xl sm:text-5xl md:text-6xl text-neutral-100 tracking-tight leading-[1.05] mb-6">
+              Autumn / Winter Lookbook 2026
+            </h2>
+            <p class="text-sm md:text-base text-neutral-300 leading-relaxed font-light mb-8">
+              A dialogue between brutalist architecture and sensual tactile materials. Photographed on 35mm film in Paris by Valentin Hennequin, featuring 6 monolithic silhouettes.
+            </p>
+            <div class="space-y-3 mb-10 text-xs font-mono text-neutral-400">
+              <div class="flex items-center gap-2">
+                <span class="text-amber-300">01</span>
+                <span>The Architectural Silhouette — Cashmere Overcoat</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-amber-300">02</span>
+                <span>Brutalist Deconstruction — Raw Edge Tailoring</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-amber-300">03</span>
+                <span>Tactile Monolith — 3-Gauge Scottish Ribbed Knit</span>
+              </div>
+            </div>
+            <a href="/lookbook.html" class="btn-luxury" data-cursor="LOOKBOOK">
+              Explore Full Campaign
+            </a>
+          </div>
+
+          <div class="lg:col-span-7 relative">
+            <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden image-reveal-wrapper shadow-2xl border border-white/10" data-cursor="VIEW">
+              <a href="/lookbook.html" class="block w-full h-full">
+                <img src="/src/assets/images/hero_luxury_fashion_1790884647993.jpg" alt="Atelier Éternel Lookbook Campaign" class="w-full h-full object-cover filter contrast-[1.05]" />
+                <div class="absolute bottom-4 right-4 bg-black/80 backdrop-blur-md px-4 py-2 border border-white/10 text-xs font-mono tracking-widest text-neutral-200 uppercase">
+                  Look 02 · Click to View
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ATELIER CRAFTSMANSHIP SPOTLIGHT -->
+      <section class="py-24 md:py-32 px-6 md:px-16 border-t border-white/10 bg-[#0d0d0d] reveal-init">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          <div class="image-reveal-wrapper aspect-[4/3] border border-white/10 relative overflow-hidden">
+            <img src="/src/assets/images/atelier_craftsman_hands_1790884634266.jpg" alt="Artisan Tailor Stitching Wool Canvas" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-xs font-mono text-neutral-300">
+              Paris 8ème Atelier · 140 Hours Per Overcoat
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-center">
+            <p class="font-mono text-xs uppercase tracking-[0.25em] text-amber-300 mb-3">
+              The Savoir-Faire
+            </p>
+            <h2 class="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-neutral-100 tracking-tight mb-6">
+              One Artisan. One Garment. Zero Compromise.
+            </h2>
+            <p class="text-sm text-neutral-300 leading-relaxed font-light mb-6">
+              Every Atelier Éternel piece begins on a solid French oak cutting table. Our master tailors draw individual chalk patterns directly onto unspun wool fresco, rejecting computerized laser batch-cutting in favor of hand-guided shears.
+            </p>
+            <div class="grid grid-cols-2 gap-6 pt-4 border-t border-white/10 font-mono text-xs">
+              <div>
+                <span class="block text-2xl font-serif text-amber-300 mb-1">100%</span>
+                <span class="text-neutral-400">Single-Origin Traceability</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-serif text-amber-300 mb-1">&lt; 45</span>
+                <span class="text-neutral-400">Pieces Per Seasonal Run</span>
+              </div>
+            </div>
+            <div class="mt-8">
+              <a href="/about.html" class="editorial-link text-xs tracking-widest uppercase text-neutral-200 hover:text-amber-200">
+                Discover Our Heritage & Workshop →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PRESS & ACCREDITATIONS CAROUSEL -->
+      <section class="py-24 border-t border-white/10 bg-[#121212] reveal-init">
+        <div class="px-6 md:px-16 max-w-4xl mx-auto text-center">
+          <p class="font-mono text-xs uppercase tracking-[0.25em] text-amber-300 mb-8">
+            Press & Accolades
+          </p>
+          
+          <div class="relative min-h-[140px] flex items-center justify-center">
+            <div class="press-quote-slide active transition-opacity duration-500">
+              <p class="font-serif-luxury text-2xl sm:text-3xl text-neutral-100 leading-relaxed italic mb-4">
+                “Atelier Éternel redefines European haute tailoring with brutalist restraint. Every seam carries the weight of museum-grade craftsmanship.”
+              </p>
+              <span class="font-mono text-xs uppercase tracking-widest text-neutral-400">Vogue International · Autumn 2026</span>
+            </div>
+          </div>
+
+          <div class="mt-8 flex justify-center items-center gap-3">
+            <button class="press-nav-dot active w-2 h-2 rounded-full bg-amber-300" data-press="0" aria-label="Press quote 1"></button>
+            <button class="press-nav-dot w-2 h-2 rounded-full bg-white/20 hover:bg-white/40" data-press="1" aria-label="Press quote 2"></button>
+            <button class="press-nav-dot w-2 h-2 rounded-full bg-white/20 hover:bg-white/40" data-press="2" aria-label="Press quote 3"></button>
+            <button class="press-nav-dot w-2 h-2 rounded-full bg-white/20 hover:bg-white/40" data-press="3" aria-label="Press quote 4"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER / PRIVATE SALON ENROLLMENT -->
+      <section class="py-24 md:py-32 px-6 md:px-16 border-t border-white/10 bg-[#0d0d0d] reveal-init">
+        <div class="max-w-2xl mx-auto text-center">
+          <p class="font-mono text-xs uppercase tracking-[0.25em] text-amber-300 mb-3">
+            Private Access
+          </p>
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl text-neutral-100 tracking-tight mb-4">
+            The Archival Register
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-400 mb-8 font-light">
+            Receive private preview invitations for limited capsule releases and private trunk show bookings across Paris, Tokyo, New York, and Milan.
+          </p>
+
+          <form class="newsletter-form max-w-md mx-auto">
+            <div class="luxury-input-group">
+              <input type="email" id="home-newsletter-email" required placeholder=" " />
+              <label for="home-newsletter-email">Enter your confidential email address</label>
+            </div>
+            <button type="submit" class="btn-luxury w-full text-xs">
+              Request Salon Membership
+            </button>
+          </form>
+          <p class="text-[10px] font-mono text-neutral-500 mt-4">
+            Strict confidentiality guaranteed. Maximum 4 dispatches per calendar year.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-[#0a0a0a] pt-16 pb-12 px-6 md:px-16 text-xs text-neutral-400 font-light">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        
+        <div class="md:col-span-1">
+          <span class="font-display tracking-[0.22em] text-sm font-semibold text-neutral-100 uppercase block mb-4">
+            Atelier Éternel
+          </span>
+          <p class="leading-relaxed text-neutral-400 mb-4">
+            Haute couture and avant-garde tailoring sculpted in our Paris atelier. Uncompromising tactile purity.
+          </p>
+          <span class="font-mono text-[11px] text-amber-300">24 Rue du Faubourg Saint-Honoré, Paris</span>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">Collections</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/shop.html" class="hover:text-amber-200 transition-colors">Autumn/Winter 2026</a></li>
+            <li><a href="/shop.html?category=Outerwear" class="hover:text-amber-200 transition-colors">Outerwear & Coats</a></li>
+            <li><a href="/shop.html?category=Tailoring" class="hover:text-amber-200 transition-colors">Bespoke Tailoring</a></li>
+            <li><a href="/shop.html?category=Knitwear" class="hover:text-amber-200 transition-colors">Geelong Knitwear</a></li>
+            <li><a href="/shop.html?category=Accessories" class="hover:text-amber-200 transition-colors">Leather & Silk Objects</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">House & Atelier</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/about.html" class="hover:text-amber-200 transition-colors">The Philosophy</a></li>
+            <li><a href="/about.html#craft" class="hover:text-amber-200 transition-colors">Artisanal Savoir-Faire</a></li>
+            <li><a href="/lookbook.html" class="hover:text-amber-200 transition-colors">Campaign Lookbook</a></li>
+            <li><a href="/contact.html" class="hover:text-amber-200 transition-colors">Flagship Ateliers</a></li>
+            <li><a href="/contact.html#vip" class="hover:text-amber-200 transition-colors">Private VIP Styling</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-neutral-200 mb-4">Concierge & Care</h4>
+          <ul class="space-y-2.5">
+            <li><a href="/contact.html" class="hover:text-amber-200 transition-colors">Client Services</a></li>
+            <li><span class="text-neutral-500">concierge@ateliereternel.com</span></li>
+            <li><span class="text-neutral-500">+33 1 42 68 50 00</span></li>
+            <li><span class="text-neutral-500">Complimentary Global Returns</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-neutral-500">
+        <div>© 2026 ATELIER ÉTERNEL PARIS. All rights reserved.</div>
+        <div class="flex gap-6">
+          <span>Terms of Maison</span>
+          <span>Traceability Codex</span>
+          <span>Privacy Protocol</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SLIDE-OUT CART / BAG DRAWER -->
+    <div class="cart-drawer-overlay"></div>
+    <aside class="cart-drawer-panel" aria-label="Shopping Bag">
+      <!-- Drawer Header -->
+      <div class="p-6 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="font-serif text-lg tracking-wide text-neutral-100">Shopping Bag</span>
+          <span class="cart-count-badge font-mono text-xs text-amber-300">(0)</span>
+        </div>
+        <button data-close-cart class="text-neutral-400 hover:text-white p-2 text-sm focus:outline-none" aria-label="Close cart drawer">
+          ✕
+        </button>
+      </div>
+
+      <!-- Free Shipping Progress -->
+      <div class="px-6 py-3 bg-white/5 border-b border-white/10">
+        <div class="text-[11px] font-mono text-neutral-300 cart-shipping-text mb-1.5">
+          Complimentary courier delivery on all orders over €500
+        </div>
+        <div class="w-full bg-white/10 h-1 overflow-hidden">
+          <div class="cart-shipping-bar bg-amber-300 h-full transition-all duration-500 w-0"></div>
+        </div>
+      </div>
+
+      <!-- Itemized Cart List -->
+      <div class="cart-items-container flex-1 overflow-y-auto px-6 divide-y divide-white/5">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+
+      <!-- Drawer Footer & Summary -->
+      <div class="p-6 border-t border-white/10 bg-[#0f0f0f] space-y-4">
+        <!-- Promo Code Input -->
+        <div class="flex gap-2">
+          <input type="text" placeholder="Privilege Code (e.g. ETERNEL10)" class="cart-promo-input bg-black border border-white/15 px-3 py-2 text-xs font-mono text-neutral-200 placeholder:text-neutral-600 focus:outline-none focus:border-amber-300 flex-1 uppercase" />
+          <button class="cart-promo-apply-btn btn-luxury-outline text-xs px-3 py-2">Apply</button>
+        </div>
+        <span class="cart-promo-msg hidden"></span>
+
+        <!-- Financial Summary -->
+        <div class="space-y-1.5 text-xs text-neutral-400 font-mono">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span class="cart-subtotal-price text-neutral-200">€0</span>
+          </div>
+          <div class="cart-discount-row flex justify-between text-amber-300" style="display: none;">
+            <span>VIP Privilege (10%)</span>
+            <span class="cart-discount-amount">-€0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Courier Dispatch</span>
+            <span class="text-neutral-200">Complimentary</span>
+          </div>
+          <div class="flex justify-between text-sm text-neutral-100 pt-2 border-t border-white/10 font-serif">
+            <span>Total</span>
+            <span class="cart-final-total font-mono text-amber-300">€0</span>
+          </div>
+        </div>
+
+        <button class="cart-checkout-btn btn-luxury w-full text-xs">
+          Proceed To Checkout
+        </button>
+      </div>
+    </aside>
+
+    <!-- FULLSCREEN ANIMATED OVERLAY MENU -->
+    <div class="menu-overlay" aria-label="Main Site Navigation">
+      <div class="flex justify-between items-center w-full">
+        <span class="font-display text-sm tracking-[0.22em] text-neutral-300 uppercase">
+          Index · Maison
+        </span>
+        <button data-close-menu class="text-neutral-400 hover:text-white text-xl p-2 focus:outline-none" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-6 sm:gap-8 my-auto">
+        <a href="/index.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          01. Editorial Home
+        </a>
+        <a href="/shop.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          02. All Collections
+        </a>
+        <a href="/lookbook.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          03. Campaign Lookbook
+        </a>
+        <a href="/about.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          04. Philosophy & Atelier
+        </a>
+        <a href="/contact.html" class="font-serif text-3xl sm:text-5xl md:text-6xl text-neutral-100 hover:text-amber-200 transition-colors">
+          05. Concierge & Flagships
+        </a>
+      </nav>
+
+      <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 text-xs font-mono text-neutral-400 border-t border-white/10 pt-6">
+        <div>
+          <div>Paris Marais · Tokyo Aoyama · New York SoHo · Milano Montenapoleone</div>
+          <div class="text-neutral-500 mt-1">Concierge Line: +33 1 42 68 50 00</div>
+        </div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-amber-300">Instagram</a>
+          <a href="#" class="hover:text-amber-300">Artsy</a>
+          <a href="#" class="hover:text-amber-300">Vogue Runway</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHECKOUT MODAL OVERLAY -->
+    <div class="checkout-modal fixed inset-0 bg-black/85 backdrop-blur-md z-[9996] opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+      <div class="bg-[#121212] border border-white/15 max-w-lg w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+        <button class="close-checkout-modal absolute top-5 right-5 text-neutral-400 hover:text-white text-base">✕</button>
+        <div class="checkout-modal-body">
+          <p class="font-mono text-xs uppercase tracking-widest text-amber-300 mb-1">Maison Checkout</p>
+          <h3 class="font-serif text-2xl text-neutral-100 mb-4">Complete Your Acquisition</h3>
+          
+          <div class="checkout-order-summary bg-black/40 p-4 border border-white/10 mb-6 font-mono text-xs"></div>
+
+          <form class="checkout-form space-y-4">
+            <div class="luxury-input-group">
+              <input type="text" id="chk-name" required placeholder=" " />
+              <label for="chk-name">Full Recipient Name</label>
+            </div>
+            <div class="luxury-input-group">
+              <input type="email" id="chk-email" required placeholder=" " />
+              <label for="chk-email">Email for Dispatch & Provenance</label>
+            </div>
+            <div class="luxury-input-group">
+              <input type="text" id="chk-addr" required placeholder=" " />
+              <label for="chk-addr">Delivery Address</label>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="luxury-input-group">
+                <input type="text" id="chk-city" required placeholder=" " />
+                <label for="chk-city">City & Country</label>
+              </div>
+              <div class="luxury-input-group">
+                <input type="text" id="chk-postal" required placeholder=" " />
+                <label for="chk-postal">Postal Code</label>
+              </div>
+            </div>
+            <div class="p-3 bg-white/5 border border-white/10 text-[11px] font-mono text-neutral-300 flex items-center gap-2">
+              <span class="text-amber-300">✦</span>
+              <span>White-Glove Courier Service Included with Archival Packaging</span>
+            </div>
+            <button type="submit" class="btn-luxury w-full text-xs py-3 mt-4">
+              Confirm & Place Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Scripts -->
+    <script type="module" src="/src/js/main.js"></script>
+
+    <!-- Homepage Specific Slider & Press Quote Controller -->
+    <script type="module">
+      import { PRESS_QUOTES } from '/src/js/products.js';
+
+      // Hero Carousel
+      const heroSlides = document.querySelectorAll('.hero-slide');
+      const heroDots = document.querySelectorAll('.hero-dot');
+      let currentHero = 0;
+      let heroInterval = null;
+
+      function setHeroSlide(idx) {
+        heroSlides.forEach((slide, i) => {
+          slide.style.opacity = i === idx ? '1' : '0';
+        });
+        heroDots.forEach((dot, i) => {
+          if (i === idx) {
+            dot.classList.add('text-amber-300', 'font-bold');
+            dot.classList.remove('text-neutral-400');
+          } else {
+            dot.classList.remove('text-amber-300', 'font-bold');
+            dot.classList.add('text-neutral-400');
+          }
+        });
+        currentHero = idx;
+      }
+
+      function startHeroLoop() {
+        heroInterval = setInterval(() => {
+          const next = (currentHero + 1) % heroSlides.length;
+          setHeroSlide(next);
+        }, 5500);
+      }
+
+      heroDots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+          clearInterval(heroInterval);
+          setHeroSlide(idx);
+          startHeroLoop();
+        });
+      });
+
+      startHeroLoop();
+
+      // Press Carousel
+      const pressContainer = document.querySelector('.press-quote-slide');
+      const pressDots = document.querySelectorAll('.press-nav-dot');
+      let currentPress = 0;
+
+      function renderPress(idx) {
+        if (!pressContainer) return;
+        pressContainer.style.opacity = '0';
+        setTimeout(() => {
+          const p = PRESS_QUOTES[idx];
+          pressContainer.innerHTML = `
+            <p class="font-serif-luxury text-2xl sm:text-3xl text-neutral-100 leading-relaxed italic mb-4">
+              “${p.quote}”
+            </p>
+            <span class="font-mono text-xs uppercase tracking-widest text-neutral-400">${p.source} · ${p.year}</span>
+          `;
+          pressContainer.style.opacity = '1';
+        }, 250);
+
+        pressDots.forEach((dot, i) => {
+          if (i === idx) {
+            dot.classList.add('bg-amber-300');
+            dot.classList.remove('bg-white/20');
+          } else {
+            dot.classList.remove('bg-amber-300');
+            dot.classList.add('bg-white/20');
+          }
+        });
+        currentPress = idx;
+      }
+
+      pressDots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          renderPress(i);
+        });
+      });
+
+      setInterval(() => {
+        const next = (currentPress + 1) % PRESS_QUOTES.length;
+        renderPress(next);
+      }, 7000);
+    </script>
+  </body>
+</html>
